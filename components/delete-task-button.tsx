@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
-import { deleteTask } from "@/actions/action";
+import { deleteTask } from "@/actions/tasks.action";
 
 type DeleteTaskButtonProps = {
   id: number;

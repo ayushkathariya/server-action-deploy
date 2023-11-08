@@ -1,6 +1,6 @@
 import Task from "@/components/task";
 import CreateTask from "@/components/create-task";
-import { getTask } from "@/actions/action";
+import { getTask } from "@/actions/tasks.action";
 
 export default async function Home() {
   const tasks = await getTask();
@@ -18,5 +18,3 @@ export default async function Home() {
     </div>
   );
 }
-
-// .env updated
