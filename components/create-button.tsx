@@ -7,11 +7,7 @@ export default function CreateButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button
-      type="submit"
-      color={`${pending ? "default" : "primary"}`}
-      disabled={pending}
-    >
+    <Button type="submit" color="primary" disabled={pending}>
       Submit
     </Button>
   );
