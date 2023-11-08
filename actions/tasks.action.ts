@@ -45,7 +45,7 @@ export async function createTask(formData: FormData) {
       throw new Error("Task is required");
     }
 
-    const createdTask = await prisma.task.create({
+    await prisma.task.create({
       data: {
         task: task as string,
         user: {
@@ -57,7 +57,11 @@ export async function createTask(formData: FormData) {
     });
 
     revalidatePath("/");
-    return { createdTask };
+    return {
+      success: true,
+      statusCode: 201,
+      message: "Task created successfully",
+    };
   } catch (err: any) {
     return { error: err.message };
   }
